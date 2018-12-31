@@ -17,17 +17,20 @@ main {
   min-height: calc(100vh - 100px);
 }
 
+.container {
+  max-width: 720px;
+}
+
+.input-field {
+  margin: auto;
+}
+
 .footer {
   height: 50px;
 }
 
-.btn-flat {
-  font-size: 0.7em;
-}
-
 .details {
-  font-weight: lighter;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   font-style: italic;
 }
 

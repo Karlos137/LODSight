@@ -40,7 +40,7 @@ class Form extends Component {
           onSubmit={this.handleSubmit}
         >
           <div className="row">
-            <div class="input-field col s12">
+            <div class="input-field col s6 offset-s3">
               <input
                 id="email"
                 type="email"
@@ -69,7 +69,7 @@ class Form extends Component {
           </div>
           <div className="row right-align">
             <button
-              className="btn waves-effect waves-light reset-btn"
+              className="btn-small waves-effect waves-light reset-btn"
               onClick={this.handleResetButton}
             >
               Reset
