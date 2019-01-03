@@ -4,6 +4,8 @@
 /client/coverage
 /client/build
 /client/.DS_Store
+config.properties
+LODSight.jar
 # dependencies
 /node_modules
 /.pnp

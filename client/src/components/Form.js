@@ -19,6 +19,12 @@ class Form extends Component {
 
   handleSubmit = e => {
     this.setState({ msg: <p>Data byla odeslána ke zpracování.</p> });
+
+    const submitButton = document.querySelector("#submitBtn");
+    submitButton.setAttribute("disabled", "");
+    setTimeout(() => {
+      submitButton.removeAttribute("disabled");
+    }, 3000);
   };
 
   handleResetButton = e => {
@@ -40,10 +46,11 @@ class Form extends Component {
           onSubmit={this.handleSubmit}
         >
           <div className="row">
-            <div class="input-field col s6 offset-s3">
+            <div className="input-field col s6 offset-s3">
               <input
                 id="email"
                 type="email"
+                name="email"
                 className="validate"
                 value={this.state.email}
                 onChange={this.handleChange}
@@ -76,7 +83,11 @@ class Form extends Component {
             </button>
           </div>
           <div className="row center-align">
-            <button className="btn waves-effect waves-light" type="submit">
+            <button
+              id="submitBtn"
+              className="btn waves-effect waves-light"
+              type="submit"
+            >
               Odeslat
               <i className="material-icons right">send</i>
             </button>
