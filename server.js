@@ -10,9 +10,6 @@ app.post("/", (req, res) => {
   const textAreaText = req.body.textArea;
   const email = req.body.email;
   console.log(req.body);
-  console.log(req.body);
-  console.log(textAreaText);
-  console.log(email);
 
   let final = [];
   let arr = [];
@@ -47,7 +44,9 @@ app.post("/", (req, res) => {
         ],
         (error, stdout, stderr) => {
           if (error) {
-            throw error;
+            console.log(`Nezpracovatelné URL endpointu nebo URI datasetu:
+             ${error}`);
+            return;
           }
           console.log(stdout);
         }
@@ -58,7 +57,9 @@ app.post("/", (req, res) => {
         ["-jar", "LODSight.jar", "config.properties", item.endpoint],
         (error, stdout, stderr) => {
           if (error) {
-            throw error;
+            console.log(`Nezpracovatelné URL endpointu:
+             ${error}`);
+            return;
           }
           console.log(stdout);
         }
