@@ -46,7 +46,7 @@ class Form extends Component {
           onSubmit={this.handleSubmit}
         >
           <div className="row">
-            <div className="input-field col s6 offset-s3">
+            <div className="input-field col m6 offset-m3 s8 offset-s2">
               <input
                 id="email"
                 type="email"
